@@ -1,10 +1,10 @@
 module.exports = function reverse (n) {
-    n = Math.abs(n);
+    let num = Math.abs(n);
     let res = 0;
-    while(n != 0){
-        let dig = n % 10;
+    while(num !== 0){
+        let dig = num % 10;
         res = res * 10 + dig;
-        n = Math.trunc(n / 10);        
+        num = (num - dig) / 10;        
     }
     return res;  
 }
